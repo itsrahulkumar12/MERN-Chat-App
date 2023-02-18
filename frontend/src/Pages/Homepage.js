@@ -9,6 +9,8 @@ import {
   TabPanel,
   TabPanels,
 } from "@chakra-ui/react";
+import Login from "../components/Authentication/Login";
+import Signup from "../components/Authentication/Signup";
 
 const Homepage = () => {
   return (
@@ -16,10 +18,10 @@ const Homepage = () => {
       <Box
         d="flex"
         justifyContent="center"
-        p={3}
+        p={0.5}
         bg={"white"}
         w="100%"
-        m="40px 0 15px 0"
+        m="15px 0 15px 0"
         borderRadius="lg"
         borderWidth="1px"
       >
@@ -33,7 +35,14 @@ const Homepage = () => {
           Chat-ER-Box
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box
+        bg="white"
+        w="100%"
+        p={3}
+        pb={0.5}
+        borderRadius="lg"
+        borderWidth="1px"
+      >
         <Tabs variant="soft-rounded">
           <TabList mb="1em">
             <Tab width="50%">Login</Tab>
@@ -41,10 +50,10 @@ const Homepage = () => {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <p>one!</p>
+              <Login />
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Signup />
             </TabPanel>
           </TabPanels>
         </Tabs>
